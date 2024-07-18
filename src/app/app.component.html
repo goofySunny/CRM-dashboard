@@ -75,7 +75,8 @@
     </div>
     <!-- Bottom half -->
     <div class="mb-[78px]">
-      <div class="rounded-3xl bg-gradient-to-r from-[#EAABF0] to-[#4623E9] px-[33px] py-[24px] mx-[28px] justify-center flex flex-col">
+      <div
+        class="rounded-3xl bg-gradient-to-r from-[#EAABF0] to-[#4623E9] px-[33px] py-[24px] mx-[28px] justify-center flex flex-col">
         <span class="text-md text-[#ffffff] font-semibold">Upgrade to PRO to get access all Features!</span>
         <button class="text-[#4925E9] bg-[#ffffff] rounded-full text-lg font-semibold mt-4">Get Pro Now!</button>
       </div>
@@ -112,10 +113,10 @@
       </div>
     </div>
     <!-- First Row -->
-     <!-- Second Row -->
-    <div class="flex justify-around bg-[#ffffff] rounded-3xl mt-10 p-[32px]">
+    <!-- Second Row -->
+    <div class="flex justify-around bg-[#ffffff] rounded-3xl mt-10 p-[32px] items-center">
       <!-- Earning -->
-      <div class="flex flex-row">
+      <div class="flex flex-row px-5 border-r-2">
         <div class="rounded-full h-fit self-center p-[22px] bg-[#EAFFF3] me-[20px]">
           <img src="assets/earning.svg" class="w-[84px]" alt="">
         </div>
@@ -123,15 +124,15 @@
           <p class="text-[#ACACAC]">Earning</p>
           <span class="font-semibold text-2xl">$198k</span>
           <div class="flex flex-row">
-          <img src="assets/chevron-down2.svg" class="rotate-180" alt="">
-          <span class="text-[#00AC4F] font-semibold">37.8%</span>
-          <span class="mx-1">this month</span>
+            <img src="assets/chevron-down2.svg" class="rotate-180" alt="">
+            <span class="text-[#00AC4F] font-semibold">37.8%</span>
+            <span class="mx-1">this month</span>
           </div>
         </div>
       </div>
       <!-- Earning -->
       <!-- Balance -->
-      <div class="flex flex-row">
+      <div class="flex flex-row px-5 border-r-2">
         <div class="rounded-full h-fit self-center p-[22px] bg-[#CAF1FF] me-[20px]">
           <img src="assets/balance.svg" class="w-[84px]" alt="">
         </div>
@@ -139,15 +140,15 @@
           <p class="text-[#ACACAC]">Balance</p>
           <span class="font-semibold text-2xl">$2.4k</span>
           <div class="flex flex-row">
-          <img src="assets/chevron-down2.svg" alt="">
-          <span class="text-[#D0004B] font-semibold">2%</span>
-          <span class="mx-1">this month</span>
+            <img src="assets/chevron-down2.svg" alt="">
+            <span class="text-[#D0004B] font-semibold">2%</span>
+            <span class="mx-1">this month</span>
           </div>
         </div>
       </div>
       <!-- Balance -->
       <!-- Total Sales -->
-      <div class="flex flex-row">
+      <div class="flex flex-row px-5">
         <div class="rounded-full h-fit self-center p-[22px] bg-gradient-to-r from-[#FFA3CF] to-[#FFD4F3] me-[20px]">
           <img src="assets/totalSales.svg" class="w-[84px]" alt="">
         </div>
@@ -155,15 +156,49 @@
           <p class="text-[#ACACAC]">Total Sales</p>
           <span class="font-semibold text-2xl">$89k</span>
           <div class="flex flex-row">
-          <img src="assets/chevron-down2.svg" alt="">
-          <span class="text-[#00AC4F] font-semibold">11%</span>
-          <span class="mx-1">this month</span>
+            <img src="assets/chevron-down2.svg" class="rotate-180" alt="">
+            <span class="text-[#00AC4F] font-semibold">11%</span>
+            <span class="mx-1">this month</span>
           </div>
         </div>
       </div>
       <!-- Total Sales -->
     </div>
     <!-- Second Row -->
+    <!-- Third Row -->
+    <div class="flex flex-row justify-between mt-[28px]">
+      <!-- First Box -->
+      <div class="rounded-2xl bg-[#ffffff] flex flex-col flex-grow p-[30px] me-[36px]">
+        <div class="flex flex-row justify-between">
+          <div>
+            <h4>Overview</h4>
+          </div>
+          <div>
+            <select name="overview-selection" id="overview-selection">
+              <option value="quarterly">Quarterly</option>
+              <option value="monthly">Monthly</option>
+              <option value="weekly">Weekly</option>
+              <option value="yearly">Yearly</option>
+            </select>
+          </div>
+          </div>
+          <span>Monthly earning</span>
+          <!-- D3 generated bar chart -->
+          <div>
+
+          </div>
+      </div>
+      <!-- Second Box -->
+      <div class="rounded-2xl p-[24px] w-[304px] flex flex-col bg-[#ffffff]">
+        <h4>Customers</h4>
+        <span class="text-[#ACACAC]">Customers that buy products</span>
+        <!-- D3 generated pie chart -->
+        <div>
+
+        </div>
+      </div>
+    </div>
+    <!-- Third Row -->
   </div>
   <!-- ==================================================  -->
   <!-- ===================== Dashboard ==================  -->
