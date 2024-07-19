@@ -107,9 +107,9 @@
       <div>
         <span>Hello Evano</span>
       </div>
-      <div class="rounded-lg flex flex-row bg-[#ffffff]">
+      <div class="rounded-lg flex flex-row bg-[#ffffff] p-2 focus-within:border focus-within:border-black">
         <img src="assets/search.svg" alt="">
-        <input type="text" placeholder="Search">
+        <input type="text" placeholder="Search" class="outline-none bg-transparent">
       </div>
     </div>
     <!-- First Row -->
@@ -171,7 +171,7 @@
       <div class="rounded-2xl bg-[#ffffff] flex flex-col flex-grow p-[30px] me-[36px]">
         <div class="flex flex-row justify-between">
           <div>
-            <h4>Overview</h4>
+            <h4 class="font-semibold">Overview</h4>
           </div>
           <div>
             <select name="overview-selection" id="overview-selection">
@@ -182,10 +182,14 @@
             </select>
           </div>
           </div>
-          <span>Monthly earning</span>
+          <span class="text-[#ACACAC]">Monthly earning</span>
           <!-- D3 generated bar chart -->
-          <div>
-
+          <div class="flex flex-row justify-between items-end h-[300px]">
+            <div *ngFor="let statistic of statistics" class="flex flex-col relative group">
+              <span class="absolute rounded-lg self-center invisible group-hover:visible top-[-40px] bg-[#000000] text-[#ffffff] p-0.5">{{ statistic.percentage }}%</span>
+              <div style="width: 40px" [ngStyle]="{'height.px': statistic.percentage * 3}" class="bg-[#F2EFFF] group-hover:bg-[#5932EA] rounded-lg"></div>
+              <span>{{ statistic.month }}</span>
+            </div>
           </div>
       </div>
       <!-- Second Box -->
@@ -193,8 +197,7 @@
         <h4>Customers</h4>
         <span class="text-[#ACACAC]">Customers that buy products</span>
         <!-- D3 generated pie chart -->
-        <div>
-
+        <div id="bar-chart">
         </div>
       </div>
     </div>
