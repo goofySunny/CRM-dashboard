@@ -1,17 +1,22 @@
-import { NgFor, NgStyle } from '@angular/common';
-import { Component } from '@angular/core';
+import { NgFor, NgIf, NgStyle } from '@angular/common';
+import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { ChartModule } from 'primeng/chart';
 import * as d3 from "d3";
+import { Chart } from 'chart.js';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NgFor, NgStyle],
+  imports: [RouterOutlet, NgFor, NgStyle, ChartModule, NgIf],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'CRM-Dash';
+  pieChartDataSet: any;
+  pieChartOptions: any;
+  sideBarStatus: boolean = true;
 
   statistics: { month: string, percentage: number }[] = [
     {
@@ -64,9 +69,37 @@ export class AppComponent {
     }
   ]
 
-  // barChart = d3.selection()
-    // .data(this.statistics)
-    // .enter()
-    // .append("div")
-    // .attr("height", 10)
+  sideBarToggle() {
+    if (this.sideBarStatus) {
+      this.sideBarStatus = false
+    } else {
+      this.sideBarStatus = true
+    }
+  }
+
+  ngOnInit(): void {
+    this.sideBarStatus = true;
+    this.pieChartDataSet = {
+      labels: ["New Customers", "OverAll"],
+      datasets: [{
+        label: "",
+        data: [30, 20, 50],
+        backgroundImage: ["linear-gradient(#FF007A,#CDF4FF)", "linear-gradient(#EAABF0, #4623E9)"],
+        scale: [1, 3],
+        // backgroundColor: ["#F1419D", "red"]
+    }]
+  }
+  this.pieChartOptions = {
+    plugins: {
+      customCanvasBackgroundColor: {
+        color: "#ffffff"
+      },
+      title: {
+      },
+      legend: {
+        display: false
+      }
+    }
+  }
+}
 }
