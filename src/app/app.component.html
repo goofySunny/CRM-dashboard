@@ -1,12 +1,12 @@
-<div class="flex flex-row w-full poppins font-semibold subpixel-antialiased">
+<div class="flex flex-col xl:flex-row w-full poppins font-semibold subpixel-antialiased">
   <!-- ==================================================  -->
   <!-- ===================== Side menu ==================  -->
   <!-- ==================================================  -->
   <div
-    class="flex flex-col bg-[#ffffff] justify-between max-w-[306px] min-w-[102px] h-screen shadow-3xl flex sticky top-0">
+    class="flex xl:flex-col bg-[#ffffff] justify-between items-baseline w-auto xl:max-w-[306px] xl:min-w-[102px] h-auto lg:h-screen shadow-3xl flex sticky top-0">
     <div class="">
       <div class="flex flex-col">
-        <div class="px-[28px] flex flex-row items-center py-10">
+        <div class="px-[28px] flex flex-row items-center lg:py-10">
           <button (click)="sideBarToggle()">
             <img src="assets/DashboardIcon.png" class="h-fit mx-2" alt="">
           </button>
@@ -15,7 +15,7 @@
             <span class="px-1 text-sm font-thin">v0.0.1</span>
           </h1>
         </div>
-        <div class="flex items-center cursor-pointer rounded-lg bg-[#5932EA] p-2 mx-[28px]">
+        <div class="hidden lg:flex items-center cursor-pointer rounded-lg bg-[#5932EA] p-2 mx-[28px]">
           <div>
             <img src="assets/dashboard.svg" class="w-[24px] color-[#ffffff] self-center" alt="">
           </div>
@@ -24,7 +24,7 @@
           </div>
         </div>
         <!-- Buttons -->
-        <div class="mt-[29px] mx-[38px] flex flex-col">
+        <div class="mt-[29px] mx-[38px] lg:flex lg:flex-col hidden">
           <!-- Button -->
           <div class="flex flex-row justify-between items-center mb-[40px]">
             <div class="flex flex-row">
@@ -79,12 +79,12 @@
     <!-- Bottom half -->
     <div class="mb-[78px]">
       <div
-        class="rounded-3xl bg-gradient-to-r from-[#EAABF0] to-[#4623E9] px-[33px] py-[24px] mx-[28px] justify-center flex flex-col"
+        class="rounded-3xl bg-gradient-to-r from-[#EAABF0] to-[#4623E9] px-[33px] py-[24px] mx-[28px] justify-center flex flex-col hidden xl:block"
         *ngIf="sideBarStatus">
         <span class="text-md text-[#ffffff] font-semibold">Upgrade to PRO to get access all Features!</span>
         <button class="text-[#4925E9] bg-[#ffffff] rounded-full text-lg font-semibold mt-4">Get Pro Now!</button>
       </div>
-      <div class="flex flex-row justify-between mx-[28px] mt-[48px] items-baseline">
+      <div class="flex flex-row justify-between mx-[28px] mt-4 lg:mt-[48px] items-baseline">
         <div class="flex flex-row">
           <img src="assets/profile.png" class="rounded-full me-[12px] h-fit" alt="">
           <div class="flex flex-col" *ngIf="sideBarStatus">
