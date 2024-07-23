@@ -17,6 +17,8 @@ export class AppComponent implements OnInit {
   pieChartDataSet: any;
   sideBarStatus: boolean = true;
 
+
+  // Table data
   sales = [
     {
       productName: "Abstract 3D",
@@ -48,6 +50,7 @@ export class AppComponent implements OnInit {
     }
   ]
 
+  // Bar chart data
   statistics: { month: string, percentage: number }[] = [
     {
       month: "Jan",
@@ -109,6 +112,7 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     this.sideBarStatus = true;
+    // Pie chart data
     this.pieChartDataSet = {
       labels: ["New Customers", "OverAll"],
       datasets: [{
