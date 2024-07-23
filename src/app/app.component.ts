@@ -17,6 +17,37 @@ export class AppComponent implements OnInit {
   pieChartDataSet: any;
   sideBarStatus: boolean = true;
 
+  sales = [
+    {
+      productName: "Abstract 3D",
+      productDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      productStock: 32,
+      productPrice: 45.99,
+      productTotalSales: 20,
+    },
+    {
+      productName: "Abstract 3D",
+      productDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      productStock: 32,
+      productPrice: 45.99,
+      productTotalSales: 20,
+    },
+    {
+      productName: "Abstract 3D",
+      productDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      productStock: 32,
+      productPrice: 45.99,
+      productTotalSales: 20,
+    },
+    {
+      productName: "Abstract 3D",
+      productDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      productStock: 32,
+      productPrice: 45.99,
+      productTotalSales: 20,
+    }
+  ]
+
   statistics: { month: string, percentage: number }[] = [
     {
       month: "Jan",
