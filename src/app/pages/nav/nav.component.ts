@@ -10,6 +10,15 @@ import { Component } from '@angular/core';
 })
 export class NavComponent {
   sideBarStatus: boolean = true;
+  overLayStatus: boolean = false;
+
+  overlayToggle() {
+    if (this.overLayStatus) {
+      this.overLayStatus = false
+    } else {
+      this.overLayStatus = true
+    }
+  }
 
   sideBarToggle() {
     if (this.sideBarStatus) {

@@ -9,7 +9,7 @@
           <button (click)="sideBarToggle()" class="hidden lg:block">
             <img src="assets/DashboardIcon.png" class="h-fit mx-2" alt="">
           </button>
-          <button (click)="sideBarToggle()" class="block lg:hidden">
+          <button (click)="overlayToggle()" class="block lg:hidden">
             <img src="assets/DashboardIcon.png" class="h-fit mx-2" alt="">
           </button>
           <h1 class="font-serif font-bold flex items-center hidden lg:block" *ngIf="sideBarStatus">
@@ -104,3 +104,32 @@
 <!-- ==================================================  -->
 <!-- ===================== Side menu ==================  -->
 <!-- ==================================================  -->
+
+<!-- ==================================================  -->
+<!-- ===================== Overlay ==================  -->
+<!-- ==================================================  -->
+<div class="fixed top-0 w-screen h-screen bg-[#000000] opacity-75 z-50 flex flex-col items-center justify-center" *ngIf="overLayStatus">
+  <button (click)="overlayToggle()" class="text-[#9197B3]">
+    close
+  </button>
+  <div class="flex flex-row">
+    <img src="assets/product.svg" class="me-2" alt="">
+    <span *ngIf="sideBarStatus" class="text-[#9197B3]">Product</span>
+  </div>
+  <div class="flex flex-row">
+    <img src="assets/customer.svg" class="me-2" alt="">
+    <span *ngIf="sideBarStatus" class="text-[#9197B3]">Customer</span>
+  </div>
+  <div class="flex flex-row">
+    <img src="assets/income.svg" class="me-2" alt="">
+    <span *ngIf="sideBarStatus" class="text-[#9197B3]">Income</span>
+  </div>
+  <div class="flex flex-row">
+    <img src="assets/promotion.svg" class="me-2" alt="">
+    <span *ngIf="sideBarStatus" class="text-[#9197B3]">Promotion</span>
+  </div>
+  <div class="flex flex-row">
+    <img src="assets/help.svg" class="me-2" alt="">
+    <span *ngIf="sideBarStatus" class="text-[#9197B3]">Help</span>
+  </div>
+</div>
