@@ -3,11 +3,12 @@ import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { plugins } from 'chart.js';
 import { ChartModule } from 'primeng/chart';
+import { NavComponent } from "./pages/nav/nav.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, CommonModule, ChartModule],
+  imports: [RouterOutlet, CommonModule, ChartModule, NavComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -15,7 +16,7 @@ export class AppComponent implements OnInit {
   title = 'CRM-Dash';
   pieChartOptions: any;
   pieChartDataSet: any;
-  sideBarStatus: boolean = true;
+
 
 
   // Table data
@@ -102,16 +103,9 @@ export class AppComponent implements OnInit {
     }
   ]
 
-  sideBarToggle() {
-    if (this.sideBarStatus) {
-      this.sideBarStatus = false
-    } else {
-      this.sideBarStatus = true
-    }
-  }
+
 
   ngOnInit(): void {
-    this.sideBarStatus = true;
     // Pie chart data
     this.pieChartDataSet = {
       labels: ["New Customers", "OverAll"],
